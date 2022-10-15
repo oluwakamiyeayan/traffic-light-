@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic light</title>
+</head>
+<style>
+   .container{
+   margin-top: 2%;
+    margin-left: 20%;
+   }
+   button{
+    border-radius: 10px;
+    height: 40px;
+    width: 150px;
+    border: none ;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(206, 114, 214);
+    margin-left: -3%;
+   
+    transition: all .3s;
+   }
+    .ok{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 2px double rgb(237, 232, 226);
+    }
+</style>
+    <body>
+        <div class="container" >
+            <button onclick="change()">Check color</button><br><br>
+
+            <div id="red" class="ok red"></div>
+            <div id="amber" class="ok"></div>
+            <div id="green" class="ok"></div>
+        </div>
+        
+    
+    </body>
+    <script>
+        let red = document.getElementById('red')
+        let amber = document.getElementById('amber')
+        let green = document.getElementById('green')
+
+        // red.style.backgroundColor = 'red'
+        let G = 'XX'
+       
+    function change() {
+        if( G == 'XX'){
+            red.style.backgroundColor = 'red'
+            amber.style.backgroundColor = 'white'
+            green.style.backgroundColor = 'white'
+            G = 'GG'
+        } else if (G == 'GG') {
+            red.style.backgroundColor = 'white'
+            amber.style.backgroundColor = 'peru'
+            green.style.backgroundColor = 'white'
+            G = 'YY'
+        }else if(G == 'YY'){
+            red.style.backgroundColor = 'white'
+            amber.style.backgroundColor = 'white'
+            green.style.backgroundColor = 'green'
+            G = 'XX'
+        }else if( G == 'XX'){
+            red.style.backgroundColor = 'red'
+            amber.style.backgroundColor = 'white'
+            green.style.backgroundColor = 'white'
+        }
+      
+    }
+
+    </script>
+</html>
